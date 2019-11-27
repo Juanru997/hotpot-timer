@@ -17,7 +17,7 @@ const meat = [
 {name: "wuhuarou1", pic:"https://macaulifestyle.com/wp-content/uploads/2017/12/Banyan-Tree-Hotpot-1024x683.jpg", time:10},
 {name: "wuhuarou2", pic:"https://macaulifestyle.com/wp-content/uploads/2017/12/Banyan-Tree-Hotpot-1024x683.jpg", time:20},
 {name: "wuhuarou3", pic:"https://macaulifestyle.com/wp-content/uploads/2017/12/Banyan-Tree-Hotpot-1024x683.jpg", time:30},
-{name: "wuhuarou4", pic:"https://macaulifestyle.com/wp-content/uploads/2017/12/Banyan-Tree-Hotpot-1024x683.jpg", time:40},
+
 ]
 
 function App() {
