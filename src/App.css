@@ -2,9 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
 
 .App-header {
   background-color: #282c34;
@@ -19,4 +16,39 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+
+
+.Flex4Food{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-top: 10px;
+}
+
+
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.FoodCon{
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 100px;
+    width:100px;
+    padding: 10px;
 }
