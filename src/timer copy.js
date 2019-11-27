@@ -5,10 +5,11 @@ import React,  { useState, useEffect } from 'react';
 // modified the code from https://medium.com/better-programming/building-a-simple-countdown-timer-with-react-4ca32763dda7
 function Timer() {
     const [seconds, setSeconds] = useState(100);
+    // setSeconds(seconds-1)
 
     //countdown
     if (seconds > 0) {
-        setSeconds(seconds-1)
+        
         setSeconds(({ seconds }) => ({
             seconds: seconds - 1
         }))
