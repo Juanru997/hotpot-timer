@@ -1,38 +1,61 @@
-import React from 'react';
-import './App.css';
-import { expression } from '@babel/template';
-import Timer from 'react-compound-timer';
+import React,  { useState, useEffect,useRef } from 'react';
 
-function Timer2(){
+// Thanks Konrad!!!!
+// modified the code from https://stackoverflow.com/questions/57036237/how-to-get-updated-props-in-setinterval-by-using-react-hooks
+function Timer() {
+
+        const [time, setTime] = React.useState(0);
+        const timerRef = React.useRef(null);
+      
+        if (time === 0) {
+          clearInterval(timerRef.current);
+        }
+        function countDown(startFrom) {
+          setTime(startFrom);
+          timerRef.current = setInterval(() => {
+            setTime((prevState) => prevState -1);
+          }, 1000);
+        }
+
     return(
-<Timer
-    initialTime={10000}
-    direction="backward"
-    startImmediately={false}
->
-    {(start, resume, pause, stop, reset, timerState) => (
-        <React.Fragment>
-            <div>
-            <Timer.Minutes /> minutes
-            <Timer.Seconds /> seconds
-            </div>
-
-            <div>{timerState}</div>
-            <br />
-            <div>
-                <button onClick={start}>Start</button>
-                <button onClick={pause}>Pause</button>
-                <button onClick={resume}>Resume</button>
-                <button onClick={stop}>Stop</button>
-                <button onClick={reset}>Reset</button>
-            </div>
-
-
-        </React.Fragment>
-    )}
-</Timer>
-    );
-
+        <div>
+            {time === 0
+                ?<h1>Times up!!</h1>
+                :<h1>Time:{time}</h1>
+            }
+            {/* <div>Time:{time}</div> */}
+            <button onClick={()=>countDown(3)}> Click here to start</button>
+            {/* {time === 0
+                ? <h1>Time's up!</h1>
+                : <h1>Time Remaining: {seconds < 10 ? `0${seconds}` : seconds}</h1>
+            } */}
+        </div>
+    )
+    
 }
 
-export default Timer2;
+
+
+export default Timer
+
+
+
+// modified the code from https://medium.com/better-programming/building-a-simple-countdown-timer-with-react-4ca32763dda7
+    //previous version of timer
+    // const [seconds, setSeconds] = useState(100);
+    // const timerRef = useRef(null);
+
+    //countdown
+
+    // const handleStart = (e) => {
+    //     const myInterval = useInterval(() => {            
+    //         let currentSeconds = seconds;
+    //         console.log(currentSeconds)
+    //         if (seconds > 0) {
+    //             setSeconds(currentSeconds-1)
+    //         }
+    //         if (seconds === 0) {
+    //                 clearInterval(myInterval)
+    //         } 
+    //     }, 1000)
+    // }

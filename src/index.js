@@ -3,14 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Timer from './timer'
 import Timer2 from './timer2'
 import {Route, BrowserRouter as Router} from 'react-router-dom';
 
 const links = (
     <Router>
         <Route exact path='/' component={App}/>
-        <Route exact path='/ha' component={Timer}/>
         <Route exact path='/timer' component={Timer2}/>
     </Router>
 )

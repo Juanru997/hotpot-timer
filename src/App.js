@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Timer from './timer2.js';
 
 const meat = [
 {name: "wuhuarou1", pic:"https://macaulifestyle.com/wp-content/uploads/2017/12/Banyan-Tree-Hotpot-1024x683.jpg", time:10},
@@ -24,7 +25,8 @@ function App() {
   return (
     <div className="App">
     
-   <Food />
+   {/* <Food /> */}
+   <Timer cookTime="3" />
     </div>
   );
 }
