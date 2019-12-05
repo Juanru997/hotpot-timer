@@ -2,15 +2,16 @@ import React,  { useState, useEffect,useRef } from 'react';
 
 // Thanks Konrad!!!!
 // modified the code from https://stackoverflow.com/questions/57036237/how-to-get-updated-props-in-setinterval-by-using-react-hooks
-function Timer() {
-
-        const [time, setTime] = React.useState(0);
+function Timer(props) {
+        const countdown = props.time;
+        const [time, setTime] = React.useState();
         const timerRef = React.useRef(null);
       
-        if (time === 0) {
+        if (time <= 0) {
           clearInterval(timerRef.current);
         }
         function countDown(startFrom) {
+        
           setTime(startFrom);
           timerRef.current = setInterval(() => {
             setTime((prevState) => prevState -1);
@@ -24,7 +25,7 @@ function Timer() {
                 :<h1>Time:{time}</h1>
             }
             {/* <div>Time:{time}</div> */}
-            <button onClick={()=>countDown(3)}> Click here to start</button>
+            <button onClick={()=>countDown(countdown)}> Click here to start</button>
             {/* {time === 0
                 ? <h1>Time's up!</h1>
                 : <h1>Time Remaining: {seconds < 10 ? `0${seconds}` : seconds}</h1>
