@@ -11,8 +11,8 @@ function Timer(props) {
         if (time <= 0) {
           clearInterval(timerRef.current);
         }
-        function countDown(startFrom) {
         
+        function countDown(startFrom) {
           setTime(startFrom);
           timerRef.current = setInterval(() => {
             setTime((prevState) => prevState -1);
@@ -22,15 +22,15 @@ function Timer(props) {
     return(
         <div>
             {time === 0
+                
                 ?<div className="FontForInside">Times up!!</div>
                 :<div className="FontForInside">Time:{time}</div>
             }
             {/* <div>Time:{time}</div> */}
-          <button onClick={()=>countDown(countdown)}> {countdown}s</button>
-            {/* {time === 0
-                ? <h1>Time's up!</h1>
-                : <h1>Time Remaining: {seconds < 10 ? `0${seconds}` : seconds}</h1>
-            } */}
+    
+          <button onClick={()=>countDown(countdown)}> {time}s
+            
+          </button>
         </div>
     )
     
