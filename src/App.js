@@ -27,7 +27,7 @@ function App() {
     
    <Food />
    {/* <Timer cookTime={meat} /> */}
-   <Timer time={3}/>
+   {/* <Timer time={3}/> */}
     </div>
   );
 }
@@ -46,9 +46,9 @@ function SingleFood(props){
   return(
     <div className="FoodCon">
     <img src={props.pic} width="100wh" height="100wh" />
-    <div className="centered">{props.name} </div>
+    <div className="centered"><Timer time={props.time}/> </div>
     <div className="bottom-right">{props.time}s </div>
-    {/* <Timer time={props.time}/> */}
+    {/* <Timer time={props.time}/> */}
   </div>
   );
 }

@@ -1,4 +1,5 @@
 import React,  { useState, useEffect,useRef } from 'react';
+import './App.css';
 
 // Thanks Konrad!!!!
 // modified the code from https://stackoverflow.com/questions/57036237/how-to-get-updated-props-in-setinterval-by-using-react-hooks
@@ -21,11 +22,11 @@ function Timer(props) {
     return(
         <div>
             {time === 0
-                ?<h1>Times up!!</h1>
-                :<h1>Time:{time}</h1>
+                ?<div className="FontForInside">Times up!!</div>
+                :<div className="FontForInside">Time:{time}</div>
             }
             {/* <div>Time:{time}</div> */}
-            <button onClick={()=>countDown(countdown)}> Click here to start</button>
+          <button onClick={()=>countDown(countdown)}> {countdown}s</button>
             {/* {time === 0
                 ? <h1>Time's up!</h1>
                 : <h1>Time Remaining: {seconds < 10 ? `0${seconds}` : seconds}</h1>
