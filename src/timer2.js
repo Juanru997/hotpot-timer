@@ -1,14 +1,25 @@
 import React,  { useState, useEffect,useRef } from 'react';
 import './App.css';
 
+import {
+  PopupboxManager,
+  PopupboxContainer
+} from 'react-popupbox';
+
+
 // Thanks Konrad!!!!
 // modified the code from https://stackoverflow.com/questions/57036237/how-to-get-updated-props-in-setinterval-by-using-react-hooks
 function Timer(props) {
+        const foodName = props.name;
         const countdown = props.time;
         const [time, setTime] = React.useState();
         const timerRef = React.useRef(null);
+
+        // console.log(foodName);
       
         if (time <= 0) {
+          console.log("!");
+          openPopupbox();
           clearInterval(timerRef.current);
         }
         
@@ -19,17 +30,33 @@ function Timer(props) {
           }, 1000);
         }
 
+
+        //popupbox
+        function openPopupbox() {
+          const content = (
+            <div>
+              <p className="quotes">Times up!</p>
+              {/* <span className="quotes-from">― Mark Twain</span> */}
+            </div>
+          )
+          PopupboxManager.open({ content })
+        }
+
     return(
         <div>
-            {time === 0
-                
+  
+          {time === 0 
                 ?<div className="FontForInside">Times up!!</div>
-                :<div className="FontForInside">Time:{time}</div>
+                :<div className="FontForInside"><div className="NameTime">{foodName}</div></div>
             }
             {/* <div>Time:{time}</div> */}
-    
-          <button onClick={()=>countDown(countdown)}> {time}s
-            
+          {/* <div className="FoodName">{foodName}</div> */}
+          <button onClick={()=>countDown(countdown)} className="buttonForDC"> {time}s
+          {/* <button onClick={()=>countDown(countdown)} className="buttonForDC"> {time}s */}
+
+          {/* {time === 0
+          ?<div>{time}s</div>
+          !<p>start again</p>} */}
           </button>
         </div>
     )

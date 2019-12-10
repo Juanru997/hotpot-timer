@@ -1,11 +1,13 @@
 .App {
   text-align: center;
+  background-color: chocolate;
+  margin-block: 0;
 }
 
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,15 +20,21 @@
   color: #09d3ac;
 }
 
+.buttonForDC{
+  background-color: #4CAF50;
+}
 
-
+.ImgBl{
+  filter: blur(0.8px);
+  /* -webkit-filter: blur(2px); */
+}
 .Flex4Food{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 
@@ -40,23 +48,34 @@
 
 .bottom-right {
   position: absolute;
-  bottom: 10%;
-  right: 10%;
+  bottom: 20%;
+  right: 20%;
 }
 
 .FoodCon{
     position: relative;
     text-align: center;
     color: white;
-    height: 100px;
-    width:100px;
+    height: 150px;
+    width:150px;
     padding: 10px;
+}
+
+.FoodName{
+  font-size: 150%;
+
+
 }
 
 
 
-
 .FontForInside{
-  font-size: 100%;
+  font-size: 250%;
+  margin: 0;
+}
+
+
+.NameTime{
+  margin-block-end: 0;
 
 }
