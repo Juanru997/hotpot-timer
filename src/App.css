@@ -9,7 +9,7 @@
   /* background-color: #282c34; */
   background-image: url(https://cdn1.i-scmp.com/sites/default/files/styles/1200x800/public/images/methode/2019/01/18/5ac4f36a-1a28-11e9-8ff8-c80f5203e5c9_image_hires_160844.jpg?itok=nkZzCFoI&v=1547798936);
   background-size: 100%;
-  min-height: 20vh;
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,6 +20,18 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+#Meat{
+  padding-bottom: 5vh;
+  
+}
+
+#Bean{
+  padding-bottom: 5vh;
+}
+#Veg{
+  padding-bottom: 5vh;
 }
 
 .navbar{
@@ -43,18 +55,19 @@
 .navWord{
  padding-right: 10%;
   padding-left: 10%;
-
+  color: white;
+  font-size: 2.5vh;
 }
 .buttonForDC{
   background-color: chocolate;
-  font-size: 5vw;
+  font-size: 120%;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.ImgBl{
+/* .ImgBl{
   filter: blur(1px);
-  /* -webkit-filter: blur(2px); */
-}
+  -webkit-filter: blur(2px);
+} */
 .Flex4Food{
   display: flex;
   flex-direction: row;
@@ -81,7 +94,7 @@
 
 
 .cate{
-  background-color: red;
+  background-color: orangered;
   min-height: 5vh;
   align-items: center;
   justify-content: center;
@@ -101,6 +114,7 @@
     height: 150px;
     width:150px;
     padding: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .FoodName{
@@ -118,4 +132,17 @@
 .NameTime{
   margin-block-end: 0;
 
+}
+
+.subT{
+  margin-block-start: 0;
+    margin-block-end: 0.2em;
+    font-size:100%;
+    background-color: darkslategrey;
+
+}
+
+.T{
+  margin-block-end: 0.15em;
+  font-size: 250%;
 }
