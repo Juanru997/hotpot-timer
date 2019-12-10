@@ -15,6 +15,9 @@ const bean_and_flour = [
   {name:"豆皮",pic:"https://tshop.r10s.com/36a/e9d/5579/681d/50d1/6f62/806d/1101e8aab8c4544489145b.jpg",time:120},{name:"炸豆衣卷",pic:"https://img5.21food.cn/img/album/2017/10/12/food13600071041023L8.jpg",time:30},{name:"老豆腐",pic:"https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/9f510fb30f2442a75b659357da43ad4bd01302dc.jpg",time:15},{name:"魔芋丝",pic:"https://www.zhifure.com/upload/images/2018/9/5175338214.jpg",time:15},{name:"腐竹",pic:"http://www.zsjiadu.com/data/upload/image/20171109/1510192048138759.jpg",time:15},{name:"面筋泡",pic:"http://m.ntcai.com/images/201811/goods_img/3398_P_1543457225299.jpg",time:600},
 ]
 
+const vegetables=[
+  {name:"土豆",pic:"http://images.meishij.net/p/20170330/5ff27eba123f27615b1c0f0c406a5c27_180x180.jpg",time:360},{name:"海带",pic:"http://img.meishizuofa.com/caipu/2017032011/2hvkzithex22hvkzithex2.jpg",time:300},{name:"娃娃菜",pic:"http://cfcdn4.azsg.opensnap.com/azsg/snapphoto/photo/LD/GWDG/3C67RRE2F041B9B397F40Amx.jpg",time:60},{name:"藕片",pic:"https://img14.360buyimg.com/n1/jfs/t1/983/20/6995/320524/5ba36914E2ac52da1/c4decb306f5be9b1.jpg",time:180},{name:"豆芽",pic:"http://5b0988e595225.cdn.sohucs.com/images/20190719/9f5965331c78474a98dc18c91ec3863a.gif",time:180},{name:"金针菇",pic:"http://cfcdn2.azsg.opensnap.com/azcn/snapphoto/photo/16F/XIML/6MCGQL057E2C64E78509E2mx.jpg",time:180},
+]
 function App() {
   return (
     <html>
@@ -22,10 +25,15 @@ function App() {
       <h1>Hotpot Timer</h1>
     </head>
   <body className="App">
-       
+       <nav className="navbar">
+         <a href="#Meat" className="navWord">Meat</a>
+         <a href="#Bean" className="navWord">Bean and Flour</a>
+         <a href="#Veg" className="navWord">Veg</a>
+       </nav>
     <Meat/>
     <Bean/>
-
+    <Veg/>
+    
   </body>
   </html>
    
@@ -34,17 +42,42 @@ function App() {
 
 function Meat(){
   return(
+    <div id="Meat">
+    <div className="cate">
+    <h1 className="cateWord">Meat</h1>
+    </div>
   <div className="Flex4Food">
+    {/* <h1>Meat</h1> */}
     {meat.map(SingleFood)}
+  </div>
   </div>
   );
 }
 
 function Bean(){
   return(
-  <div className="Flex4Food">
+    <div id="Bean">
+       <div className="cate">
+    <h1 className="cateWord">Bean and Flour</h1>
+    </div>
+    <div className="Flex4Food">
   {bean_and_flour.map(SingleFood)}
   </div>
+    </div>
+  );
+}
+
+
+function Veg(){
+  return(
+    <div id="Veg">
+       <div className="cate">
+    <h1 className="cateWord">Vegetables</h1>
+    </div>
+    <div className="Flex4Food">
+  {vegetables.map(SingleFood)}
+  </div>
+    </div>
   );
 }
 

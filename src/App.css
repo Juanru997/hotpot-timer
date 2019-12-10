@@ -6,7 +6,9 @@
 
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  background-image: url(https://cdn1.i-scmp.com/sites/default/files/styles/1200x800/public/images/methode/2019/01/18/5ac4f36a-1a28-11e9-8ff8-c80f5203e5c9_image_hires_160844.jpg?itok=nkZzCFoI&v=1547798936);
+  background-size: 100%;
   min-height: 20vh;
   display: flex;
   flex-direction: column;
@@ -20,12 +22,37 @@
   color: #09d3ac;
 }
 
+.navbar{
+  display: flex;
+  flex-direction: row;
+  min-height: 5vh;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  width: 100%;
+  z-index: 1;
+
+  align-items: center;
+  justify-content: center;
+  background: orange;
+
+ 
+
+}
+
+.navWord{
+ padding-right: 10%;
+  padding-left: 10%;
+
+}
 .buttonForDC{
-  background-color: #4CAF50;
+  background-color: chocolate;
+  font-size: 5vw;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .ImgBl{
-  filter: blur(0.8px);
+  filter: blur(1px);
   /* -webkit-filter: blur(2px); */
 }
 .Flex4Food{
@@ -52,6 +79,21 @@
   right: 20%;
 }
 
+
+.cate{
+  background-color: red;
+  min-height: 5vh;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  margin-block-start: 0;
+}
+
+
+.cateWord{
+  margin-block-start: 0;
+}
+
 .FoodCon{
     position: relative;
     text-align: center;
@@ -63,8 +105,6 @@
 
 .FoodName{
   font-size: 150%;
-
-
 }
 
 
